@@ -1,0 +1,291 @@
+*{margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: #000;}
+
+body{font-size: 15px; line-height: 30px; font-family: 'KoddiUDOnGothic-Regular'; position: relative;}
+
+.top {position:fixed; bottom:50px; right:50px; display:none; background-color: black;color: #fff; padding: 16px; border-radius: 50%;}
+
+
+@font-face {
+    font-family: 'KoddiUDOnGothic-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/KoddiUDOnGothic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*조선일보명조*/
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+#main {width: 100%; height:950px; 
+	background: url(../images/main_bg.jpg) no-repeat center top;/*수정*/}
+
+
+
+
+
+.header { width: 1320px; margin: 0 auto; padding-top: 14px;}
+
+
+.nav {float: right;}
+.nav li {float: left;}
+
+.main_nav {
+	
+    margin: 0;
+    padding: 0;
+    counter-increment: itemcounter;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main_nav::before {
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.menu {
+    cursor: pointer;
+    font-size: 17px;
+    position: relative;
+    white-space: nowrap;
+    
+}
+
+.menu::before,
+.menu::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.menu::before {
+    content: '';
+    /* show by default */
+}
+
+.menu--list {
+    font-family: 'Chosunilbo_myungjo' ; font-weight: bold; font-size: 17px;
+	margin: 0 15px ;
+}
+
+.menu--list::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.menu--list:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+
+
+
+.sec1 {background: url(../images/section1_bg.jpg) no-repeat center top; width: 100%; height:714px; text-align: center;}
+.sec1_inner {width: 1320px; margin: 0 auto;}
+.s1_title {font-family: 'Chosunilbo_myungjo'; font-size: 22px;  margin: 100px 0 50px 0;}
+.s1_con {font-family: 'KoddiUDOnGothic-Regular';font-size: 13px; text-align: center; margin-bottom: 100px;}
+
+/*새로추가*/
+.mission_box {
+    display: flex;
+    justify-content: space-around;
+}
+.mission {float: left;}
+
+
+
+/* 
+
+호버시 테두리 생김
+
+.mission {
+    position:relative;
+    display:inline-block;
+    margin:0 50px;
+    }
+
+    .mission {margin-top: 20px;}
+    .mission img{
+        max-width:100%; 
+        display:block;
+    }
+    
+    .mission::before, .mission::after{
+        content:' ';
+        position:absolute;
+        top:50%;
+        left:50%;
+        width:100%;
+        height:100%;
+        transform:translate(-50%,-50%);
+        transition:all 0.8s; 
+    }
+    
+    .mission::before{
+        border-top:1.5px solid #429c6b;
+        border-bottom:1.5px solid #429c6b;
+        width:0;}
+
+    .mission::after{
+        border-left:1.5px solid #429c6b;
+        border-right:1.5px solid #429c6b;
+        height:0;}
+    
+    .mission:hover span.text{display:block;}
+    .mission:hover::before{width:100.6%;}
+    .mission:hover::after{height:100.6%;} */
+
+
+
+    
+
+.sec2 {width: 100%;}
+.sec2_inner {width: 1320px; margin: 0 auto;}
+.s2_title {text-align: center; font-family: 'Chosunilbo_myungjo'; font-size: 22px;  margin: 80px 0 50px 0;}
+.s2_con {font-family: 'KoddiUDOnGothic-Regular';font-size: 13px; text-align: center; margin-bottom: 70px;}
+
+
+.history_box {box-sizing: border-box; background: url(../images/history_center.png) no-repeat top center; height: 1238px;}
+
+
+
+.history1 { width: 400px; height: 380px; float: left; margin-top: 32px; }
+.history1 li a {display: block; text-align: right; font-size: 13px;}
+
+.history2 {width: 400px; height: 380px; float: right; padding-top: 100px;}
+.history2 li a {display: block; text-align: left; font-size: 13px;}
+
+.history3 {width: 400px; height: 380px; clear: both; float: left; margin-top: -160px;}
+.history3 li a {display: block; text-align: right; font-size: 13px;}
+
+
+.history4 {width: 400px; height: 380px; float: right; }
+.history4 li a {display: block; text-align: left; font-size: 13px;}
+
+
+.history5 {width: 400px; height: 380px; clear: both; float: left; margin-top: -170px; }
+.history5 li a {display: block; text-align: right; font-size: 13px;}
+
+.history6 {width: 400px; height: 380px; float: right; }
+.history6 li a {display: block; text-align: left; font-size: 13px;}
+
+.history7 {width: 400px; height: 100px; clear: both; float: left; margin-top: -140px;}
+.history7 li a {display: block; text-align: right; font-size: 13px;}
+
+.sec3{width: 100%; position: relative;}
+.sec3 video{width:100%; display: block;}
+.sec3_text {position: absolute; top: 5%; left: 5%;}
+.s3_title {font-size: 22px; font-family: 'Chosunilbo_myungjo'; margin-bottom: 50px;}
+
+
+
+.sec4 {width: 100%; height: 1700px;}
+.sec4_inner {width: 1320px; margin: 80px auto;}
+
+.s4_box {margin-bottom: 50px; text-align: center; height: 200px;}
+.s4_title{ font-family: 'Chosunilbo_myungjo'; font-size: 22px; margin-bottom: 50px;}
+.s4_title_2 { font-family: 'KoddiUDOnGothic-Regular'; font-size: 15px; line-height: 25px; }
+
+
+
+
+.count {padding-left: 150px; color:#161616; text-align: left; height: 700px;}
+
+.count li {float:left; margin: 0 200px 100px 0 ; text-align: left; width: 100px;}
+.count li:nth-child(1) {margin-left: 0; position: relative;}
+.count li:nth-child(2) {position: relative;}
+.count li:nth-child(3) {position: relative;}
+.count li:nth-child(4) {position: relative; margin-right: 0;}
+.count li:nth-child(6) {position: relative;}
+.count li:nth-child(7) {position: relative;}
+.count li:nth-child(5) {position: relative; margin-left: 0; clear: both;}
+.count li:nth-child(8) {position: relative; margin-right: 0;}
+i {padding: 20px 0;}
+.number {font-size: 30px; padding: 20px 0;}
+
+
+
+.k1 {position: absolute; top: 79%; right:20%; font-size: 30px;}
+.k2 {position: absolute; top: 79%; right:20%; font-size: 30px;}
+.k3 {position: absolute; top: 79%; right:20%; font-size: 30px;}
+.k4 {position: absolute; top: 79%; right:20%; font-size: 30px;}
+.k5 {position: absolute; top: 79%; right:20%; font-size: 30px;}
+.k6 {position: absolute; top: 79%; right:20%; font-size: 30px;}
+.t7 {position: absolute; top: 79%; right:60%; font-size: 30px;} 
+.k8 {position: absolute; top: 79%; right:20%; font-size: 30px;}
+
+
+
+
+
+
+
+.s5_box {width: 100%; margin-bottom: 50px; text-align: center; height: 200px;}
+
+.brand li {float: left;}
+.brand li a {display: block; margin: 0 18px; border-top: 1px solid #161616;}
+.bottom {border-bottom: #161616 1px solid;}
+.brand li a:hover {opacity: 0.5;}
+
+
+/* .count li:nth-child(1) {margin-left: 0;}
+.count li:nth-child(4) {margin-right: 0;}
+.count li:nth-child(5) {margin-left: 0;}
+.count li:nth-child(8) {margin-right: 0;} */
+
+
+.footer {width: 100%; height: 401px; 
+    background: url(../images/footer_bg.png) no-repeat center top;
+    box-sizing: border-box; margin-top: 80px;}
+
+
+.footer_inner {width: 819.58px; margin: 0 auto; padding: 10% 0%;}
+
+    .left {text-align: right; float: left;}
+    .left li a { display: block; color: #fff; font-size: 11px; padding-right: 30px;}
+    .center { float: left;}
+
+    
+    
+    .center li a {display: block; color: #fff; font-size: 11px; }
+    .right {text-align: left; float: left;}
+
+    .center li:nth-child(2) {display: inline-block; float: left; margin-left: 120px; }
+    .center li:nth-child(3) {float: left; padding-left: 20px; }
+    .center li:nth-child(4) {clear: both; margin-left: 25px;}
+
+    
+
+    .center li:nth-child(2):hover {opacity: 0.5;}
+    .center li:nth-child(3):hover {opacity: 0.5;}
+
+
+    .right li a {display: block; color: #fff; font-size: 11px; padding-left: 30px;}
+
+
